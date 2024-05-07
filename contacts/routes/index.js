@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
 
     // 'contacts' table does not exist. Show an empty table.
     else if(results.rows[0].exists == false) {
-      res.render('index', { error: null, contacts: null, title: 'Contact List' });
+      res.render('index', { error: null, contacts: contacts, title: 'Contact List' });
     }
 
     // 'contacts' table exists. Show the records.
